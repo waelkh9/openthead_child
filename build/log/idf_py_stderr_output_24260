@@ -1,0 +1,9 @@
+CMake Error at D:/Users/waelk/v5.2.1/esp-idf/tools/cmake/build.cmake:268 (message):
+  Failed to resolve component 'bht1750'.
+Call Stack (most recent call first):
+  D:/Users/waelk/v5.2.1/esp-idf/tools/cmake/build.cmake:310 (__build_resolve_and_add_req)
+  D:/Users/waelk/v5.2.1/esp-idf/tools/cmake/build.cmake:599 (__build_expand_requirements)
+  D:/Users/waelk/v5.2.1/esp-idf/tools/cmake/project.cmake:605 (idf_build_process)
+  CMakeLists.txt:6 (project)
+
+

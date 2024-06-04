@@ -1,0 +1,21 @@
+dependencies:
+  espressif__esp_ot_cli_extension:
+    component_hash: null
+    source:
+      path: D:\thread\othread2\Openthread_cli_2\components\espressif__esp_ot_cli_extension
+      type: local
+    version: 1.0.2
+  idf:
+    component_hash: null
+    source:
+      type: idf
+    version: 5.2.1
+  iperf:
+    component_hash: null
+    source:
+      path: D:\Users\waelk\v5.2.1\esp-idf\examples\common_components\iperf
+      type: local
+    version: '*'
+manifest_hash: bea18b915a6de0b9623fcf845872bc17a5750f383ee750e3f2c456c3693444b3
+target: esp32c6
+version: 1.0.0

@@ -1,0 +1,52 @@
+{
+    "C_Cpp.intelliSenseEngine": "default",
+    "idf.adapterTargetName": "esp32c6",
+    "idf.customExtraPaths": "d:\\idf-tools\\tools\\xtensa-esp-elf-gdb\\12.1_20231023\\xtensa-esp-elf-gdb\\bin;d:\\idf-tools\\tools\\riscv32-esp-elf-gdb\\12.1_20231023\\riscv32-esp-elf-gdb\\bin;d:\\idf-tools\\tools\\xtensa-esp-elf\\esp-13.2.0_20230928\\xtensa-esp-elf\\bin;d:\\idf-tools\\tools\\riscv32-esp-elf\\esp-13.2.0_20230928\\riscv32-esp-elf\\bin;d:\\idf-tools\\tools\\esp32ulp-elf\\2.35_20220830\\esp32ulp-elf\\bin;d:\\idf-tools\\tools\\cmake\\3.24.0\\bin;d:\\idf-tools\\tools\\openocd-esp32\\v0.12.0-esp32-20230921\\openocd-esp32\\bin;d:\\idf-tools\\tools\\ninja\\1.11.1;d:\\idf-tools\\tools\\idf-exe\\1.0.3;d:\\idf-tools\\tools\\ccache\\4.8\\ccache-4.8-windows-x86_64;d:\\idf-tools\\tools\\dfu-util\\0.11\\dfu-util-0.11-win64;d:\\idf-tools\\tools\\esp-rom-elfs\\20230320",
+    "idf.customExtraVars": {
+        "OPENOCD_SCRIPTS": "d:\\idf-tools\\tools\\openocd-esp32\\v0.12.0-esp32-20230921/openocd-esp32/share/openocd/scripts",
+        "IDF_CCACHE_ENABLE": "1",
+        "ESP_ROM_ELF_DIR": "d:\\idf-tools\\tools\\esp-rom-elfs\\20230320/"
+    },
+    "idf.espIdfPathWin": "D:/Users/waelk/v5.2.1/esp-idf",
+    "idf.openOcdConfigs": [
+        "interface/ftdi/esp32_devkitj_v1.cfg",
+        "target/esp32.cfg"
+    ],
+    "idf.portWin": "COM8",
+    "idf.pythonBinPathWin": "d:\\idf-tools\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe",
+    "idf.toolsPathWin": "d:\\idf-tools",
+    "files.associations": {
+        "string.h": "c",
+        "udp.h": "c",
+        "ping_sender.h": "c",
+        "tasklet.h": "c",
+        "esp_openthread_netif_glue.h": "c",
+        "esp_openthread_cli.h": "c",
+        "esp_vfs_eventfd.h": "c",
+        "uart_types.h": "c",
+        "nvs_flash.h": "c",
+        "math.h": "c",
+        "cdefs.h": "c",
+        "bh1750_i2c_hal.h": "c",
+        "bme680.h": "c",
+        "esp_idf_lib_helpers.h": "c",
+        "stdlib.h": "c",
+        "freertos.h": "c",
+        "esp_ot_config.h": "c",
+        "esp_openthread.h": "c",
+        "cli.h": "c",
+        "task.h": "c",
+        "logging.h": "c",
+        "i2cdev.h": "c",
+        "i2c.h": "c",
+        "portmacro.h": "c",
+        "bh1750_i2c.h": "c",
+        "inttypes.h": "c",
+        "esp_log.h": "c",
+        "stdbool.h": "c",
+        "esp_err.h": "c",
+        "esp_ot_cli_extension.h": "c",
+        "esp_idf_version.h": "c"
+    },
+    "idf.flashType": "UART"
+}
