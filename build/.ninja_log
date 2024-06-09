@@ -2948,3 +2948,5 @@
 27111	27790	7392030190735956	D:/thread/othread2/Openthread_cli_2/build/.bin_timestamp	53d6c03308374d22
 27790	27969	0	esp-idf/esptool_py/CMakeFiles/app_check_size	89e61c480a375447
 27790	27969	0	D:/thread/othread2/Openthread_cli_2/build/esp-idf/esptool_py/CMakeFiles/app_check_size	89e61c480a375447
+91	151875306	0	CMakeFiles/confserver	4e058182fd5d75c3
+91	151875306	0	D:/thread/othread2/Openthread_cli_2/build/CMakeFiles/confserver	4e058182fd5d75c3

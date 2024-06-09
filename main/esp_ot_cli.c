@@ -212,15 +212,15 @@ void init_udp(void)
 
     if (err != OT_ERROR_NONE)
     {
-        ESP_LOGE(TAG, "UDP open error %d", err); 
+        ESP_LOGE(TAG, "UDP initialization failed because of the error %d", err); 
     } else
     {
-        ESP_LOGI(TAG, "udp init done"); 
+        ESP_LOGI(TAG, "udp initialization was successful"); 
     }
     err = otUdpBind(thread_instance, &socket_info, &bind_info, netif);
     if (err != OT_ERROR_NONE)
     {
-        ESP_LOGE(TAG, "UDP not bind error %d", err);  
+        ESP_LOGE(TAG, "UDP was not bind successfully %d", err);  
     }
 }
 void format_message(char *buffer, size_t buffer_size, float temperature, float humidity, float lux) {
@@ -244,12 +244,12 @@ void send_udp()
     otError err = otMessageAppend(message, buf, (uint16_t) strlen(buf));
     if (err != OT_ERROR_NONE)
     {
-        ESP_LOGE(TAG, "message create fail %d", err); // not seeing this error
+        ESP_LOGE(TAG, "message creation failed %d", err); // not seeing this error
     }
     err = otUdpSend(esp_openthread_get_instance(), &socket_info, message, &messageInfo);
     if (err != OT_ERROR_NONE)
     {
-        ESP_LOGE(TAG, "fail to send %d", err); // not seeing this error
+        ESP_LOGE(TAG, "failed to send message %d", err); // not seeing this error
     }
 }
 void read_sensor_data() {
@@ -259,10 +259,10 @@ void read_sensor_data() {
         ESP_ERROR_CHECK(i2cdev_init());
         bht1750();
         vTaskDelay(1000 / portTICK_PERIOD_MS);
-        ESP_LOGI(TAG, "finished");
+        ESP_LOGI(TAG, "finished light measurement");
         bme680_test();
         vTaskDelay(1000 / portTICK_PERIOD_MS);
-        ESP_LOGI(TAG, "finished bme");
+        ESP_LOGI(TAG, "finished temperature and humiditiy measurement");
 
         }
         
@@ -289,7 +289,7 @@ static void ot_task_worker(void *aContext) {
       .host_config = ESP_OPENTHREAD_DEFAULT_HOST_CONFIG(),
       .port_config = ESP_OPENTHREAD_DEFAULT_PORT_CONFIG(),
   };
-  ESP_LOGI(TAG, "init");
+  ESP_LOGI(TAG, "initialization of thread");
 
   // Initialize the OpenThread stack
   ESP_ERROR_CHECK(esp_openthread_init(&config));
@@ -311,7 +311,7 @@ static void ot_task_worker(void *aContext) {
 #if CONFIG_OPENTHREAD_CLI_ESP_EXTENSION
   esp_cli_custom_command_init();
 #endif // CONFIG_OPENTHREAD_CLI_ESP_EXTENSION
-  ESP_LOGI(TAG, "start ");
+  ESP_LOGI(TAG, "start the main loop initialization ");
   // Run the main loop
 #if CONFIG_OPENTHREAD_CLI
   esp_openthread_cli_create_task();
@@ -323,7 +323,7 @@ static void ot_task_worker(void *aContext) {
   ESP_ERROR_CHECK(
       esp_openthread_auto_start((error == OT_ERROR_NONE) ? &dataset : NULL));
 #endif
-  ESP_LOGI(TAG, "done");
+  ESP_LOGI(TAG, "finished main loop");
   
   
   esp_openthread_launch_mainloop();
