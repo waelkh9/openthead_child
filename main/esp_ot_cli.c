@@ -244,12 +244,12 @@ void send_udp()
     otError err = otMessageAppend(message, buf, (uint16_t) strlen(buf));
     if (err != OT_ERROR_NONE)
     {
-        ESP_LOGE(TAG, "message creation failed %d", err); // not seeing this error
+        ESP_LOGE(TAG, "message creation failed %d", err); 
     }
     err = otUdpSend(esp_openthread_get_instance(), &socket_info, message, &messageInfo);
     if (err != OT_ERROR_NONE)
     {
-        ESP_LOGE(TAG, "failed to send message %d", err); // not seeing this error
+        ESP_LOGE(TAG, "failed to send message %d", err);
     }
 }
 void read_sensor_data() {
@@ -351,6 +351,7 @@ void app_main(void)
     ESP_ERROR_CHECK(esp_vfs_eventfd_register(&eventfd_config));
 
     xTaskCreate(ot_task_worker, "ot_cli_main", 10240, xTaskGetCurrentTaskHandle(), 5, NULL);
+    //adding delays to avoid crashes
     vTaskDelay(5000);
     
     xTaskCreate(read_sensor_data, "sensor_data", 4096, NULL, 5, NULL);
